@@ -1,0 +1,7 @@
+llama-index
+openai
+pypdf
+python-dotenv
+llama-index-llms-groq
+llama-index-llms-gemini
+llama-index-embeddings-gemini
