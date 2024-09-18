@@ -13,6 +13,8 @@ DocMulti-Chat-Assistant app is Deployed And Available [Here](https://huggingface
 ![llamaindex_2](https://github.com/user-attachments/assets/7d8925f2-6be2-4588-a0ad-d88ec14c8dec)
 ![llamaindex_3](https://github.com/user-attachments/assets/595e7cd3-d99a-41c4-8a2a-66efddc9b4aa)
 ![llamaindex_4](https://github.com/user-attachments/assets/7224ff3e-e47a-471f-bceb-6a699f1d228c)
+
+### Examples from uploaded document file structures
 ![llamaindex_5](https://github.com/user-attachments/assets/c1b1b728-eb23-4ebf-a92b-9712ca8bff9c)
 
 ## Features
