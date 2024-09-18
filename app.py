@@ -48,24 +48,21 @@ if 'config' not in st.session_state:
         st.session_state.groq_api_key = st.text_input(
             "Enter your GROQ API Key", 
             type="password", 
-            help="Get your API key from [GROQ Console](https://console.groq.com/keys)",
-            value=st.session_state.get('groq_api_key', '')
+            help="Get your API key from [GROQ Console](https://console.groq.com/keys)"
         )
         
         # Google API Key input
         st.session_state.google_api_key = st.text_input(
             "Enter your Google API Key", 
             type="password", 
-            help="Get your API key from [Google AI Studio](https://aistudio.google.com/app/apikey)",
-            value=st.session_state.get('google_api_key', '')
+            help="Get your API key from [Google AI Studio](https://aistudio.google.com/app/apikey)"
         )
 
         # Llama Cloud API Key input
         st.session_state.llama_cloud_api_key = st.text_input(
             "Enter your Llama Cloud API Key", 
             type="password", 
-            help="Get your API key from [Llama Cloud](https://cloud.llamaindex.ai/api-key)",
-            value=st.session_state.get('llama_cloud_api_key', '')
+            help="Get your API key from [Llama Cloud](https://cloud.llamaindex.ai/api-key)"
         )
 
         # Set environment variables
@@ -97,8 +94,7 @@ if 'config' not in st.session_state:
         
         # Checkbox for LlamaParse usage
         st.session_state.use_llama_parse = st.checkbox(
-            "Use LlamaParse for complex documents (graphs, tables, etc.)", 
-            value=st.session_state.get('use_llama_parse', False)
+            "Use LlamaParse for complex documents (graphs, tables, etc.)"
         )
 
         with st.expander("Advanced Options"): 
@@ -120,10 +116,10 @@ if 'config' not in st.session_state:
 def parse_and_index_documents(uploaded_files, use_llama_parse, parsing_instruction):
     all_documents = []
 
-    if use_llama_parse and os.environ.get("LLAMA_CLOUD_API_KEY"):
+    if st.session_state.use_llama_parse and os.environ.get("LLAMA_CLOUD_API_KEY"):
         with st.spinner("Using LlamaParse for document parsing"):
             parser = LlamaParse(result_type="markdown", parsing_instruction=parsing_instruction)
-            for uploaded_file in uploaded_files:
+            for uploaded_file in st.session_state.uploaded_files:
                 file_info_placeholder = st.empty()
                 file_info_placeholder.info(f"Processing file: {uploaded_file.name}")
                 with tempfile.NamedTemporaryFile(delete=False, suffix=os.path.splitext(uploaded_file.name)[-1]) as tmp_file:
@@ -141,7 +137,7 @@ def parse_and_index_documents(uploaded_files, use_llama_parse, parsing_instructi
                     file_info_placeholder.empty()
     else:
         with st.spinner("Using SimpleDirectoryReader for document parsing"):
-            for uploaded_file in uploaded_files:
+            for uploaded_file in st.session_state.uploaded_files:
                 file_info_placeholder = st.empty()
                 file_info_placeholder.info(f"Processing file: {uploaded_file.name}")
                 with tempfile.NamedTemporaryFile(delete=False, suffix=os.path.splitext(uploaded_file.name)[-1]) as tmp_file:
