@@ -44,10 +44,23 @@ DocMulti-Chat-Assistant app is Deployed And Available [Here](https://huggingface
 4. Once indexed, use the chat interface to ask questions about your documents.
 
 ## Supported Document Types
-The application supports a wide range of document formats, including but not limited to:
-- PDF, DOCX, TXT, HTML, XLSX, CSV
-- Image formats (JPG, PNG, etc.)
-- And many more (see SUPPORTED_EXTENSIONS in the code for a full list)
+DocMulti Chat Assistant supports an extensive range of document formats, making it incredibly versatile for various use cases. Here's the full list of supported extensions:
+
+- **Text Documents**: .txt, .rtf, .md
+- **Microsoft Office**: .doc, .docx, .docm, .dot, .dotm, .xls, .xlsx, .xlsm, .xlsb, .ppt, .pptx, .pptm, .pot, .potm, .potx
+- **OpenDocument**: .odt, .ods, .odp
+- **PDF**: .pdf
+- **eBooks**: .epub
+- **Images**: .jpg, .jpeg, .png, .gif, .bmp, .svg, .tiff, .webp
+- **Web**: .htm, .html, .xml
+- **Spreadsheets**: .csv, .tsv, .dif, .sylk, .slk, .prn
+- **Database**: .dbf
+- **Other Office Suites**: 
+  - Apple iWork: .pages, .numbers, .key
+  - WordPerfect: .wpd
+  - Lotus: .wks, .123
+  - Quattro Pro: .qpw
+- **Specialized Formats**: .602, .abw, .cgm, .cwk, .hwp, .lwp, .mw, .mcw, .pbd, .sda, .sdd, .sdp, .sdw, .sgl, .sti, .sxi, .sxw, .uof, .uop, .uot, .vor, .wps, .zabw, .et, .eth, .wk1, .wk2, .wk3, .wk4, .wq1, .wq2, .wb1, .wb2, .wb3, .xlr
 
 ## Advanced Features
 - **Custom Parsing Instructions**: Tailor how LlamaParse extracts information from your documents.
