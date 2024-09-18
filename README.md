@@ -57,15 +57,11 @@ The application supports a wide range of document formats, including but not lim
 ## Notes
 - Ensure you have valid API keys for Groq, Google, and Llama Cloud before using the application.
 - Processing time may vary depending on the number and complexity of uploaded documents.
-- For optimal performance, consider the token limits of your chosen model when crafting queries.
 
 ## Troubleshooting
 - If you encounter errors during document processing, check your API keys and internet connection.
 - For issues with specific document types, try toggling the LlamaParse option.
-- Refer to the console output for detailed error messages and stack traces.
 
 ## Contributing
 Contributions to improve DocMulti Chat Assistant are welcome. Please submit pull requests or open issues on the project repository.
 
-## License
-[Specify your license here]
